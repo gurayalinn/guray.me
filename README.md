@@ -54,6 +54,8 @@ Build:
 $ go build -o ./bin/main ./cmd/server/main.go # ./bin/main to run the application / Ctrl + C to stop the application
 ```
 
+Dev:
+
 ```bash
 $ templ generate --watch --proxy="http://localhost:8080" --cmd "air"
 ```
