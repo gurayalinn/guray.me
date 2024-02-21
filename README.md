@@ -51,7 +51,7 @@ $ air # Ctrl + C to stop the application
 Build:
 
 ```bash
-$ go build -o ./bin/main ./cmd/server/main.go # ./bin/main to run the application / Ctrl + C to stop the application
+$ go build -o ./bin/main ./cmd/server/main.go # ./bin/main to run the application.
 ```
 
 Dev:
