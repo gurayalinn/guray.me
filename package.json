@@ -51,6 +51,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/bun": "^1.0.5",
+    "husky": "^9.0.11",
     "parcel": "^2.11.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11"
@@ -114,6 +115,7 @@
     "js:watch": "bun build ./assets/js/main.js --minify --sourcemap --target=browser --watch --outfile=/assets/js/bundle.js",
     "js:clean": "rm -rf ./assets/js/bundle.js",
     "html:clean": "rm -rf ./assets/*.html",
-    "dig": "dig GURAY.ME +nostats +nocomments +nocmd"
+    "dig": "dig GURAY.ME +nostats +nocomments +nocmd",
+    "prepare": "husky"
   }
 }
