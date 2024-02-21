@@ -70,6 +70,7 @@ gen-external-apklibs
 # compiled output
 dist/
 tmp/
+static/
 app/**/*.js
 app/**/*.js.map
 

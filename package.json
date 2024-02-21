@@ -1,0 +1,119 @@
+{
+  "name": "guray.me",
+  "description": "Güray ALIN - Kişisel web sitesi",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://github.com/gurayalinn/guray.me#readme",
+  "author": {
+    "name": "Guray ALIN",
+    "email": "info@guray.me",
+    "url": "https://guray.me/"
+  },
+  "bugs": {
+    "url": "https://github.com/gurayalinn/guray.me/issues",
+    "email": "info@guray.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurayalinn/guray.me.git"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "packageManager": "^bun@1.0.26",
+  "keywords": [
+    "blog",
+    "portfolio",
+    "personal-website",
+    "golang",
+    "htmx",
+    "tailwindcss",
+    "docker"
+  ],
+  "dependencies": {
+    "alpinejs": "^3.13.5",
+    "htmx.org": "^1.9.10",
+    "hyperscript.org": "^0.9.12",
+    "daisyui": "^4.6.2",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.11.0",
+    "@parcel/packager-xml": "^2.11.0",
+    "@parcel/transformer-jsonld": "^2.11.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-webmanifest": "^2.11.0",
+    "@parcel/transformer-xml": "^2.11.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/bun": "^1.0.5",
+    "parcel": "^2.11.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "singleQuote": false,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "useTabs": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "overrides": [
+      {
+        "files": ".postcssrc",
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "> 0.5%, last 2 versions",
+    "not IE 11",
+    "not IE_Mob 11",
+    "not dead"
+  ],
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
+  },
+  "source": [
+    "./assets/js/bundle.js",
+    "./assets/css/style.css",
+    "./assets/index.html"
+  ],
+  "scripts": {
+    "start": "bun run dev",
+    "build": "bun run css && bun run js && parcel build",
+    "build:clean": "rm -rf ./.parcel-cache && rm -rf ./dist && rm -rf ./bin && bun run css:clean && bun run js:clean && bun run html:clean",
+    "dev": "templ generate --watch --proxy='http://localhost:8000' --cmd 'air'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "css": "bun run css:clean && bun run css:build",
+    "css:watch": "tailwindcss -i ./assets/css/style.scss -o ./assets/css/style.css --minify --watch",
+    "css:build": "tailwindcss -i ./assets/css/style.scss -o ./assets/css/style.css --minify",
+    "css:clean": "rm -rf ./assets/css/style.css",
+    "js": "bun run js:clean && bun run js:build",
+    "js:build": "bun build ./assets/js/main.js --minify --sourcemap --target=browser --outfile=./assets/js/bundle.js",
+    "js:watch": "bun build ./assets/js/main.js --minify --sourcemap --target=browser --watch --outfile=/assets/js/bundle.js",
+    "js:clean": "rm -rf ./assets/js/bundle.js",
+    "html:clean": "rm -rf ./assets/*.html",
+    "dig": "dig GURAY.ME +nostats +nocomments +nocmd"
+  }
+}

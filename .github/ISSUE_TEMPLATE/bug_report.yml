@@ -1,0 +1,79 @@
+name: 🐞 Bug Report
+description: "Create a report to help us improve."
+title: "[BUG] <title>"
+labels: [bug]
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Welcome
+      options:
+        - label: Yes, I'm using the latest version of guray.me.
+          required: true
+        - label: Yes, I've searched similar issues on GitHub and didn't find any.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Description of the problem
+      placeholder: "A clear and concise description of what the problem is."
+    validations:
+      required: true
+
+  - type: textarea
+    id: verbose-output
+    attributes:
+      label: Console output
+      placeholder:
+        "F12 or Ctrl+Shift+I to open the developer tools, then click on the Console tab.
+        output here:"
+      render: "JavaScript"
+      value: |-
+        <details>
+
+        </details>
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      multiple: true
+      description: What version of guray.me are you using?
+      options:
+        - latest (Default)
+        - 0.0.0 (Alpha)
+        - 0.0.1 (Stable)
+        - 0.0.2 (Edge)
+        - 0.0.3 (Beta)
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Chrome
+        - Microsoft Edge
+        - Firefox
+        - Safari
+        - Opera
+        - Internet Explorer
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Validation
+      description: By submitting this issue, you agree to follow our [Code of Conduct](/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct and yes, I've included all information above (version,output, etc.).
+          required: true

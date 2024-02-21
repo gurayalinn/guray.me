@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation=
+ "http://www.google.com/shopping/reviews/schema/product/2.3/product_reviews.xsd">
+    <version>2.3</version>
+    <aggregator>
+        <name>SAMPLE RSS FEED</name>
+    </aggregator>
+    <publisher>
+        <name>guray.me</name>
+        <favicon>http://guray.me/favicon.svg</favicon>
+    </publisher>
+    <reviews>
+        <review>
+            <!-- full sample - includes all optional elements/attributes -->
+            <review_id>14295</review_id>
+            <reviewer>
+                <name is_anonymous="true">Anonymous</name>
+                <reviewer_id>509769</reviewer_id>
+            </reviewer>
+            <review_timestamp>2023-04-21T07:07:07Z</review_timestamp>
+            <title>Excellent</title>
+            <content>Got it for a friend and he loved it.</content>
+            <pros>
+                <pro>Sleek design</pro>
+                <pro>Protects the tablet well</pro>
+            </pros>
+            <cons>
+                <con>Pricey</con>
+            </cons>
+            <review_url type="singleton">http://guray.me</review_url>
+            <reviewer_images>
+                <reviewer_image>
+                    <url>http://guray.me/</url>
+                </reviewer_image>
+                <reviewer_image>
+                    <url>http://guray.me/</url>
+                </reviewer_image>
+            </reviewer_images>
+            <ratings>
+                <overall min="1" max="5">4.4</overall>
+            </ratings>
+            <products>
+                <product>
+                    <product_ids>
+                        <gtins>
+                            <gtin>541710238425</gtin>
+                        </gtins>
+                        <mpns>
+                            <mpn>60101-10000</mpn>
+                        </mpns>
+                        <skus>
+                            <sku>6206</sku>
+                        </skus>
+                        <brands>
+                            <brand>Acme</brand>
+                        </brands>
+                        <asins>
+                            <asin>B07YMJ57MB</asin>
+                        </asins>
+                    </product_ids>
+                    <product_name>Tablet Sleeve</product_name>
+                    <product_url>http://guray.me/</product_url>
+                </product>
+            </products>
+            <is_spam>false</is_spam>
+            <collection_method>post_fulfillment</collection_method>
+            <transaction_id>fulfillment_transaction_11198373</transaction_id>
+        </review>
+        <review>
+            <!-- minimal sample - no optional elements/attributes -->
+            <reviewer>
+                <name>Jane</name>
+            </reviewer>
+            <review_timestamp>2023-04-21T07:14:21Z</review_timestamp>
+            <content>I was a little skeptical at first, but it grew on me.</content>
+            <review_url type="singleton">http://guray.me/</review_url>
+            <ratings>
+                <overall min="1" max="5">4.3</overall>
+            </ratings>
+            <products>
+                <product>
+                    <product_url>http://guray.me/</product_url>
+                </product>
+            </products>
+        </review>
+    </reviews>
+</feed>

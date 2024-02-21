@@ -70,6 +70,8 @@ gen-external-apklibs
 # compiled output
 dist/
 tmp/
+static/
+pkg/
 app/**/*.js
 app/**/*.js.map
 
@@ -2360,6 +2362,11 @@ dist
 
 # Node dependencies
 node_modules
+
+bun.lockb
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # System files
 

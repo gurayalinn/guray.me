@@ -1,0 +1,137 @@
+package layout
+
+import "github.com/gurayalinn/guray.me/pkg/views/pages"
+
+templ Layout(title string, metaTags, bodyContent templ.Component) {
+	<!DOCTYPE html>
+	<html prefix="og: https://ogp.me/ns#" lang="tr" class="no-js">
+		<head>
+			<meta charset="UTF-8"/>
+			// <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' ws://localhost:*; img-src 'self' data:*;"/>
+			@metaTags
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+			<meta http-equiv="content-language" content="tr"/>
+			<base target="_top" href="/"/>
+			<title>{ title } </title>
+			//<meta name="description" content="Güray ALIN - Kişisel web sitesi"/>
+			//<meta name="keywords" content="guray.me, Güray, Güray ALIN, Web, Yazılım, Siber Güvenlik"/>
+			<!-- FAVICON -->
+			<link rel="manifest" href="/assets/site.webmanifest" crossorigin="use-credentials"/>
+			<meta name="msapplication-config" content="/assets/browserconfig.xml"/>
+			<meta name="msapplication-TileColor" content="#000"/>
+			<link rel="alternate" type="application/rss+xml" href="/assets/feed.xml"/>
+			<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png"/>
+			<link rel="shortcut icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" sizes="any"/>
+			<link rel="mask-icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" sizes="any"/>
+			<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" sizes="any"/>
+			<!-- OPENGRAPH -->
+			<meta property="og:title" content="guray.me"/>
+			<meta
+				property="og:description"
+				content="Güray ALIN - Kişisel web sitesi"
+			/>
+			<meta property="og:type" content="website"/>
+			<meta property="og:url" content="http://guray.me"/>
+			<meta property="og:headline" content="guray.me"/>
+			<meta property="og:author" content="Güray ALIN"/>
+			<meta property="og:published_time" content="2024-01-10T08:20:00+03:00"/>
+			<meta property="og:modified_time" content="2024-01-10T09:20:00+03:00"/>
+			<meta property="og:updated_time" content="2024-01-10T10:20:00+03:00"/>
+			<meta property="og:image" content="http://guray.me/assets/favicon/favicon.svg"/>
+			<meta property="og:image:alt" content="guray.me"/>
+			<meta property="og:image:width" content="512"/>
+			<meta property="og:image:height" content="512"/>
+			<meta property="og:site_name" content="guray.me"/>
+			<meta property="og:locale" content="tr_TR"/>
+			<meta property="og:locale:alternate" content="en_US"/>
+			<!-- TWITTER -->
+			<meta name="twitter:title" content="guray.me"/>
+			<meta
+				name="twitter:description"
+				content="Güray ALIN - Kişisel web sitesi"
+			/>
+			<meta name="twitter:url" content="http://guray.me/"/>
+			<meta name="twitter:image" content="http://guray.me/assets/img/favicon.svg"/>
+			<meta name="twitter:image:alt" content="guray.me"/>
+			<meta name="twitter:card" content="summary_large_image"/>
+			<meta name="twitter:creator" content="@gurayalin"/>
+			<meta name="twitter:site" content="@gurayalin"/>
+			<meta name="twitter:account_id" content="1493274529774321666"/>
+			<!-- ROBOTS -->
+			<link rel="canonical" href="http://guray.me/"/>
+			<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:-1"/>
+			<meta name="googlebot" content="index, follow"/>
+			<meta name="google-analytics" content="G-"/>
+			<meta name="google-site-verification" content="KEY"/>
+			<link rel="author" href="/assets/humans.txt"/>
+			<link rel="copyright" href="http://guray.me/"/>
+			<link rel="me" href="http://twitter.com/gurayalin"/>
+			<link rel="me" href="http://www.linkedin.com/in/gurayalin"/>
+			<link rel="alternate" href="http://guray.me/" hreflang="x-default"/>
+			<!-- MOBILE -->
+			<meta name="HandheldFriendly" content="true"/>
+			<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+			<meta name="apple-mobile-web-app-title" content="guray.me"/>
+			<meta name="apple-mobile-web-app-capable" content="yes"/>
+			<meta name="mobile-web-app-capable" content="yes"/>
+			<meta name="application-name" content="guray.me"/>
+			<!-- THEME -->
+			<meta name="supported-color-schemes" content="light dark"/>
+			<meta name="color-scheme" content="light dark"/>
+			<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)"/>
+			<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)"/>
+			<!-- SECURITY CONFIGS -->
+			<meta name="referrer" content="strict-origin-when-cross-origin"/>
+			<meta http-equiv="x-dns-prefetch-control" content="on"/>
+			<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+			<meta http-equiv="Cache-Control" content="max-age=31536000"/>
+			<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"/>
+			<!-- CSP CONFIG -->
+			// <meta http-equiv="Content-Security-Policy" content="default-src 'self';"/>
+			// <link rel="preconnect" href="https://guray.me"/>
+			// <link rel="dns-prefetch" href="https://guray.me"/>
+			// <meta name="hostname" content="guray.me"/>
+			// <link rel="preconnect" href="https://eu.umami.is" crossorigin/>
+			// <link rel="dns-prefetch" href="https://eu.umami.is"/>
+			// <link rel="preconnect" href="https://ssl.gstatic.com" crossorigin/>
+			// <link rel="preconnect" href="https://fonts.googleapis.com"/>
+			// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+			// <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+			// <link rel="dns-prefetch" href="//fonts.gstatic.com"/>
+			// <link rel="preconnect" href="//fonts.googleapis.com" crossorigin/>
+			// <link rel="preconnect" href="//fonts.gstatic.com" crossorigin/>
+			// <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+			// <link rel="preconnect" href="https://rsms.me/"/>
+			// <link rel="stylesheet" href="https://rsms.me/inter/inter.css" rel="preload"/>
+			<link rel="stylesheet" href="/assets/fonts/Inter/inter.css" rel="preload"/>
+			<link rel="stylesheet" href="/assets/css/print.css" media="print" rel="preload"/>
+			<link rel="stylesheet" href="/assets/css/style.css" media="all" rel="preload"/>
+		</head>
+		<body class="bg-stone-300 dark:bg-slate-800 w-full h-full antialiased font-sans" onload={ pages.BodyScripts() }>
+			<div id="app" class="flex flex-col min-h-screen justify-between w-full">
+				@Header()
+				@bodyContent
+				@Footer()
+				<script defer type="module" src="/assets/js/bundle.js"></script>
+				// <script async defer src="https://eu.umami.is/script.js" data-website-id="e6b24ed7-3de7-4939-adbf-b82a8e1dfe2d" data-cache="true"></script>
+				<!-- JSON-LD -->
+				<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "guray.me",
+				"alternateName": "guray.me",
+				"url": "http://guray.me/",
+				"description": "Güray ALIN - Kişisel web sitesi",
+				"headline": "guray.me",
+				"mainEntityOfPage": "http://guray.me/",
+				"image": "http://guray.me/assets/favicon/favicon.svg",
+				"datePublished": "2024-01-10T08:20:00+03:00",
+				"dateModified": "2024-01-10T09:20:00+03:00"
+				}
+				</script>
+			</div>
+		</body>
+	</html>
+}

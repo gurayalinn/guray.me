@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://guray.me/assets/sitemap.xml
+Sitemap: https://www.guray.me/assets/sitemap.xml
+Host: https://guray.me
+Disallow: /admin/
+Disallow: /static/
+Disallow: /assets/
+Disallow: /about/
+Disallow: /*.jpg
+Disallow: /*.png
+Disallow: /*.pdf
+Disallow: /*.webp
+Disallow: /*.gif$
+Disallow: /cgi-bin/
+Disallow: /tmp/

@@ -1,0 +1,32 @@
+package layout
+
+templ Footer() {
+	<footer class="flex flex-col justify-between items-center text-center align-bottom m-2">
+		<section class="">
+			<copyright
+				xmlns:dct="http://purl.org/dc/terms/"
+				class="flex flex-wrap items-center hover:underline text-sm font-medium font-mono text-black dark:text-white hover:text-green-600 dark:hover:text-green-500"
+				href="http://purl.org/dc/dcmitype/InteractiveResource"
+				property="dct:title"
+				rel="dct:type"
+				id="copyright"
+			>
+				<a
+					target="_top"
+					xmlns:cc="http://creativecommons.org/ns#"
+					href="http://guray.me/"
+					property="cc:attributionName"
+					rel="cc:attributionURL"
+				>
+					<strong><p id="datetime"></p></strong>
+				</a>
+			</copyright>
+		</section>
+	</footer>
+	<script type="text/javascript" defer nonce="csp-nonce" id="csp-nonce">
+	var d = new Date();
+	var y = d.getFullYear();
+	let datetime = y.toString();
+	document.getElementById("datetime").innerHTML = " © " + datetime + " guray.me";
+	</script>
+}

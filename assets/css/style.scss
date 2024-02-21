@@ -1,0 +1,215 @@
+@charset "UTF-8";
+@tailwind base;
+@import "reset.css";
+@tailwind components;
+@tailwind utilities;
+
+.no-js {
+  display: none !important;
+}
+
+:where(:root) {
+  font-family: "Inter", sans-serif;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :where(:root) {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+:where(:root) {
+  font-family: Inter, sans-serif;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :where(:root) {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+/* RESPONSIVE SCREENS  */
+
+@media only screen and (max-width: 767px) {
+  html body [class*="mobile hidden"],
+  html body [class*="tablet only"]:not(.mobile),
+  html body [class*="computer only"]:not(.mobile),
+  html body [class*="large screen only"]:not(.mobile),
+  html body [class*="widescreen only"]:not(.mobile),
+  html body [class*="or lower hidden"] {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  html body [class*="mobile only"]:not(.tablet),
+  html body [class*="tablet hidden"],
+  html body [class*="computer only"]:not(.tablet),
+  html body [class*="large screen only"]:not(.tablet),
+  html body [class*="widescreen only"]:not(.tablet),
+  html body [class*="or lower hidden"]:not(.mobile) {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  html body [class*="mobile only"]:not(.computer),
+  html body [class*="tablet only"]:not(.computer),
+  html body [class*="computer hidden"],
+  html body [class*="large screen only"]:not(.computer),
+  html body [class*="widescreen only"]:not(.computer),
+  html body [class*="or lower hidden"]:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  html body [class*="mobile only"]:not([class*="large screen"]),
+  html body [class*="tablet only"]:not([class*="large screen"]),
+  html body [class*="computer only"]:not([class*="large screen"]),
+  html body [class*="large screen hidden"],
+  html body [class*="widescreen only"]:not([class*="large screen"]),
+  html
+    body
+    [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  html body [class*="mobile only"]:not([class*="widescreen"]),
+  html body [class*="tablet only"]:not([class*="widescreen"]),
+  html body [class*="computer only"]:not([class*="widescreen"]),
+  html body [class*="large screen only"]:not([class*="widescreen"]),
+  html body [class*="widescreen hidden"],
+  html body [class*="widescreen or lower hidden"] {
+    display: none !important;
+  }
+}
+
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
+@media (min-width: 320px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  html {
+    font-size: 1.8rem;
+  }
+}
+
+/* Set core body defaults */
+body {
+  display: block;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-shadow: none !important;
+  text-transform: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+html body a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+iframe,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-size: 1rem;
+}
+
+p {
+  hyphens: auto;
+}

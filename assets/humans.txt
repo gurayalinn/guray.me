@@ -1,0 +1,11 @@
+﻿/* THANKS */
+	(First) EN Translator: Guray ALIN
+	Chef: Guray ALIN
+	Web designer: Guray ALIN
+	Twitter: @gurayalin
+	Contact: info [at] guray.me
+	From: Turkey
+	Last update: 2024/02/07
+	Language: English / Turkish
+	Doctype: HTML5
+	IDE: Visual Studio Code

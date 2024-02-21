@@ -1,0 +1,9 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" id="master" class="icon flat-color" data-name="Flat Color" viewBox="-2.4 -2.4 28.8 28.8">
+  <circle id="primary" cx="12" cy="12" r="10" fill="#currentcolor"/>
+  <path id="secondary" fill="#currentcolor" d="M12 18a6 6 0 1 1 4.24-10.25 1 1 0 0 1-1.4 1.42A4 4 0 0 0 12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 3.87-3H12a1 1 0 0 1 0-2h5a1 1 0 0 1 1 1 6 6 0 0 1-6 6Z"/>
+  <style>
+    #master{display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding:0;border:0;background:0 0;overflow:visible;fill:currentColor;stroke:currentColor;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-rendering:auto;text-rendering:auto;image-rendering:auto;color-rendering:auto;vertical-align:middle;transform-origin:50% 50%;transform-box:fill-box;transform:translateZ(0);transition:all .2s ease;pointer-events:none;user-select:none;cursor:default;z-index:0;filter:none;clip:auto;mask:none;mix-blend-mode:normal;opacity:1;visibility:visible;isolation:auto;clip-path:none;content:attr(title);counter-reset:none;counter-increment:none;direction:ltr;text-align:start;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;word-break:normal;hyphens:none;font:inherit;line-height:normal;letter-spacing:normal;text-transform:none}#primary,#secondary{height:auto%;width:auto}#secondary{fill:#20b2aa}#primary{fill:#2f4f4f}@media (prefers-color-scheme:dark){#secondary{fill:#7fffd4}#primary{fill:#708090}}
+  </style>
+</svg>
+
