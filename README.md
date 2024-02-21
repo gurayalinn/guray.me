@@ -23,8 +23,6 @@
 
 [Package List](/.github/PACKAGE.md)
 
-[!IMPORTANT] > **_ In this application, instead of using the [html/template](https://pkg.go.dev/html/template) package (native Golang templates), we use the [a-h/templ](https://github.com/a-h/templ) library. This amazing library implements a templating language (very similar to JSX) that compiles to Go code. Templ will allow us to write code almost identical to Go (with expressions, control flow, if/else, for loops, etc.) and have autocompletion thanks to strong typing. This means that errors appear at compile time and any calls to these templates (which are compiled as Go functions) from the handlers side will always require the correct data, minimizing errors and thus increasing the security and speed of our coding. _**
-
 ### ⚙️ Setup:
 
 <details>
@@ -56,13 +54,9 @@ Build:
 $ go build -o ./bin/main ./cmd/server/main.go # ./bin/main to run the application / Ctrl + C to stop the application
 ```
 
-[!TIP] > **_ In order to have autocompletion and syntax highlighting in VS Code for the Teml templating language, you will have to install the [templ-vscode](https://marketplace.visualstudio.com/items?itemName=a-h.templ) extension (for vim/nvim install this [plugin](https://github.com/joerdav/templ.vim)). To generate the Go code corresponding to these templates you will have to download this [executable binary](https://github.com/a-h/templ/releases/latest) from Github and place it in the PATH of your system. The command: _**
-
 ```bash
 $ templ generate --watch --proxy="http://localhost:8080" --cmd "air"
 ```
-
-[!TIP] > **_ This will allow us to monitor changes to the .templ files and compile them as we save them. Review the documentation on Templ [installation](https://templ.guide/quick-start/installation) and [support](https://templ.guide/commands-and-tools/ide-support/) for your IDE. _**
 
 ---
 
