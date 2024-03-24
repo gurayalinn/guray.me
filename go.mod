@@ -3,7 +3,7 @@ module github.com/gurayalinn/guray.me
 go 1.22.0
 
 require (
-	github.com/a-h/templ v0.2.543
+	github.com/a-h/templ v0.2.646
 	github.com/angelofallars/htmx-go v0.5.0
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/labstack/echo/v4 v4.11.4
